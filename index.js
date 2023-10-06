@@ -1,9 +1,40 @@
+// importing file
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateSvg = require("./utils/generateSvg.js");
 
+// questions for the user 
+const questions = [
+    {
+        type: "input",
+        name: "text",
+        message: "Enter the text for the logo:"
+    },
 
-const questions = [];
+    {
+        type: "input",
+        name: "backgroundColor",
+        message: "Enter the background color(#RGB or color name):",
+        default: "#ffffff"
+        // if no selection default to white
+    },
+
+    {
+        type: "input",
+        name: "textColor",
+        message: "Enter the text color(#RGB or color name):",
+        // if no selection default to black
+        default: "#000000"
+    },
+
+    {
+        type: "list",
+        name: "shapeType",
+        message: "Choose a shape for the logo:",
+        choices: ["circle", "triangle", "square"]
+    }
+
+];
 
 
 // creates svg file
