@@ -50,18 +50,18 @@ class Square extends Shape {
 
 
 function generateSvg(answers){
-    const {text, backgroundColor, textColor, shapeType} = answers;
+    const {text, color, textColor, shapeType} = answers;
 
     let shape;
     switch (shapeType){
         case "triangle":
-            shape = new Triangle(text, backgroundColor, textColor);
+            shape = new Triangle(text, color, textColor);
             break;
         case "circle":
-            shape = new Circle(text, backgroundColor, textColor);
+            shape = new Circle(text, color, textColor);
             break;
         case "square":
-            shape = new Square(text, backgroundColor, textColor);
+            shape = new Square(text, color, textColor);
             break;
 
         default:
